@@ -1,0 +1,34 @@
+# Anotações
+## Dicionário
+### Boilerplate
+* A implementação de códigos repetitivos
+### MVC
+* Model:
+    * A parte da aplicação que lida com os dados;
+* View:
+    * A parte da aplicação que lida com a visão de dados, interface com usuário;
+* Controller:
+    * A parte da aplicação que lida com a lógica e as regras de negócio;
+
+### MVW
+* Model View Whatever
+    * Implementação do modelo MVC que não precisa necessariamente usar um Controller (exceto para as regras de negócio) por apresentar o **Two-Way Data Binding**  já que alterações na view mudam os dados do model e mudanças no model alteram a view.
+
+### Single Page Application
+* Aplicações web que se assemelham a experiência das de desktop por carregar sob demanda os recursos utilizados em uma mesma página, sem redirecionar ou recarregar.
+
+###Diretiva
+
+ 1. instrução ou conjunto de instruções para a execução de um plano, uma ação, um empreendimento etc.
+ 2. norma de procedimento.
+ 3. Conjunto de indicações gerais, normas, instruções, consoante as quais deve alguém proceder.
+
+[https://www.dicio.com.br/diretiva/](https://www.dicio.com.br/diretiva/)
+
+
+###DOM
+* Document Object Model
+
+*"O Modelo de Objeto de Documento  (DOM) é uma interface de programação para documentos HTML, XML e SVG . Ele fornece uma representação estruturada do documento como uma árvore. O DOM define métodos que permitem acesso à árvore, para que eles possam alterar a estrutura, estilo e conteúdo do documento. O DOM fornece uma representação do documento como um grupo estruturado de nós e objetos, possuindo várias propriedades e métodos. Os nós também podem ter manipuladores de eventos que lhe são inerentes, e uma vez que um evento é acionando, os manipuladores de eventos são executados. Essencialmente, ele conecta páginas web a scripts ou linguagens de programação."*
+
+[https://developer.mozilla.org/pt-BR/docs/DOM/Referencia_do_DOM](https://developer.mozilla.org/pt-BR/docs/DOM/Referencia_do_DOM)
