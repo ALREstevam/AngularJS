@@ -1,0 +1,18 @@
+<!doctype html>
+<html ng-app>
+	<body>
+		<div ng-controller="FnController">
+			<h1>{{ getMessage() }}</h1>
+		</div>
+
+		<script src="../angular.js"></script>
+		<script type="text/javascript">
+			function FnController($scope){
+				$scope.getMessage = function(){
+					return "[Hello World]";
+				}
+			}
+		</script>
+
+	</body>
+</html>

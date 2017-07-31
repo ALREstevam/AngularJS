@@ -1,0 +1,23 @@
+<!-- modulo.html -->
+
+<!doctype html>
+<html ng-app="MyApp">
+	<body>
+		<div ng-controller="HelloWorldController">
+			Hello {{nome}}
+		</div>
+
+		<script src="../angular.js"></script>
+		<script type="text/javascript">
+			var app = angular.module('MyApp', []);
+
+			app.controller('HelloWorldController', ['$scope', function($scope){
+				$scope.nome = 'World';
+			}])
+
+
+		</script>
+
+
+	</body>
+</html>

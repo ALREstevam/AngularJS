@@ -1,0 +1,34 @@
+<!-- factory-recipe.html -->
+<!doctype html>
+<html ng-app="myApp">
+	<body>
+		<div ng-controller="TwitterController">
+			<span><b>Token as a factory: </b> {{token}}</span>
+		</div>
+	
+		<script src="../angular.js"></script>
+		<script type="text/javascript">
+			var app = angular.module("myApp", []);
+			app.value('$twitterApiToken', "YtejcE9elD3rr=="); //Token declarado como value
+			app.factory('$TwitterTokenService', ['$twitterApiToken', 
+				function($twitterApiToken){
+					var f = {};
+					f.getToken = function(){
+						return $twitterApiToken;
+					}
+					return f;
+
+				}
+			]);
+
+			app.controller('TwitterController', ['$scope', '$TwitterTokenService', 
+				function($scope, $TwitterTokenService){
+					$scope.token = $TwitterTokenService.getToken();
+				}
+			]);
+
+
+		</script>
+	</body>
+	
+</html>
