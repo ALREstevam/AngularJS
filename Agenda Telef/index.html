@@ -1,0 +1,69 @@
+<!--
+DIRETIVAS
+ng-app: diretiva que delimita as fronteiras da aplicação
+
+ngController: vincula um elemento da View ao Controller através da criação de um Scope
+
+ngBind: substitui um elemento por uma expressão
+
+ngRepeat: iterando sobre itens de uma coleção (arrays) ou objetos
+
+-->
+<html ng-app="listaTelefonica">
+<head>
+	<title>Lista Telefônica</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+
+	<style type="text/css">
+		.jumbotron{
+			width: 400px;
+			text-align: center;
+			margin-top: 20px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+	</style>
+
+
+	<script src="../angular.js"></script>
+	<script type="text/javascript">
+		angular.module("listaTelefonica", []);
+		angular.module("listaTelefonica").controller('listaTelefonicaController', function($scope){
+			$scope.app = "Lista Telefônica";
+
+
+			$scope.contatos[
+				{nome: 'Carlos', 	telefone: '6455-9895'},
+				{nome: 'Braga', 	telefone: '5462-3115'},
+				{nome: 'Alberto', 	telefone: '1254-4875'},
+				{nome: 'Nóbrega', 	telefone: '1256-5874'},
+				{nome: 'Maria', 	telefone: '1256-7852'},
+				{nome: 'Ana', 		telefone: '1254-6985'}
+			]
+
+		});
+
+
+	</script>
+</head>
+<body ng-controller="listaTelefonicaController">
+	<div class="jumbotron">
+		<h4 ng-bind="app"></h4>
+		<h4>{{app + ' 2.0'}}</h4>
+		<table>
+			<tr>
+				<th>Nome</th>
+				<th>Telefone</th>
+			</tr>
+
+			<tr ng-repeat="contato in contatos"></tr>
+
+		</table>
+
+
+
+
+
+	</div>
+</body>
+</html> 
